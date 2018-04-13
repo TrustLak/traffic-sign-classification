@@ -18,17 +18,6 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -85,13 +74,19 @@ The difference between the original data set and the augmented data set is the f
 
 My final model consisted of the following layers:
 
+input: 32x32x1 (grayscale)
+convolution: filter: filter_hight = , filter_width = , in_depth = , out_depth = , stride = , padding = 'VALID'
+activation: tanh
+max_pool: filter_hight = , filter_width = , stride = , padding = 'VALID'
+
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
+| Input         		| 32x32x1 (grayscale)   							| 
+| Convolution 3x3     	| filter_hight = 5, filter_width = 5, in_depth = 6, out_depth = 20, stride = 1x1, padding = 'VALID' 	|
+| tanh					|												|
+| Max pooling	      	| filter_hight = 2, filter_width = 2, stride = 2x2, padding = 'VALID' 				|
+| Convolution 3x3	    | filter_hight = 5, filter_width = 5, in_depth = 1, out_depth = 6, stride = 1x1, padding = 'VALID' |
+| tanh					|												|
 | Fully connected		| etc.        									|
 | Softmax				| etc.        									|
 |						|												|
