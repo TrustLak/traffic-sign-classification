@@ -48,13 +48,9 @@ Sample of the dataset is visualized in the IPython notebook. The data is clearly
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
+#### 1. Describe how you preprocessed the image data. 
 
 As a first step, I decided to convert the images to grayscale because I believe there is little information in color. In some cases however, the red or blue color can help make better predictions. We focus however on the grayscale.
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
 
 As a last step, I normalized the image data because this will make the optimization process much faster. In may cases, this step is necessary for the convergence of the optimization algorithm.
 
