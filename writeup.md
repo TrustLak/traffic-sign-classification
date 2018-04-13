@@ -72,12 +72,7 @@ The difference between the original data set and the augmented data set is the f
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-My final model consisted of the following layers:
-
-input: 32x32x1 (grayscale)
-convolution: filter: filter_hight = , filter_width = , in_depth = , out_depth = , stride = , padding = 'VALID'
-activation: tanh
-max_pool: filter_hight = , filter_width = , stride = , padding = 'VALID'
+My model is a slight variation of LeNet architecture. Some of the filters have different dimensions. The details are included in the following table:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -87,10 +82,13 @@ max_pool: filter_hight = , filter_width = , stride = , padding = 'VALID'
 | Max pooling	      	| filter_hight = 2, filter_width = 2, stride = 2x2, padding = 'VALID' 				|
 | Convolution 3x3	    | filter_hight = 5, filter_width = 5, in_depth = 1, out_depth = 6, stride = 1x1, padding = 'VALID' |
 | tanh					|												|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Max pooling	      	| filter_hight = 2, filter_width = 2, stride = 2x2, padding = 'VALID' 				|
+| flatten					|												|
+| Fully connected		| input: 500x1, output: 200       									|
+| tanh					|												|
+| Fully connected		| input: 200x1, output: 100       									|
+|	sigmoid					|												|
+| Fully connected		| input: 100x1, output: 43       									|
  
 
 
