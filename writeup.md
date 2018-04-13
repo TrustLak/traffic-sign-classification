@@ -122,8 +122,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text](60_kmh.jpg) ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text](60_kmh.jpg) ![alt text](road_work.jpg) ![alt text](stop_sign.jpg) 
+![alt text](yield_sign.jpg) ![alt text](left_turn.jpeg)
 
 The first image might be difficult to classify because ...
 
