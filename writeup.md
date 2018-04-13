@@ -86,12 +86,12 @@ The last layers is our logits, which are passed to a softmax layer. The softmax 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 
-| Optimizer		| Adam       			|
-| Loss function		| Cross entropy       			|
-| Batch size		| 128      			|
-| Learning rate		|  0.0015       			|
-| Epochs		|  10       			|
-| Layer initialization		|  Truncated normals with mu = 0 and sigma = 0.1  			|
+| Optimizer		| Adam       			|  
+| Loss function		| Cross entropy       			|  
+| Batch size		| 128      			|  
+| Learning rate		|  0.0015       			|  
+| Epochs		|  10       			|  
+| Layer initialization		|  Truncated normals with mu = 0 and sigma = 0.1  			|  
 
 
 
