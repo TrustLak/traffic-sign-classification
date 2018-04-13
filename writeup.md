@@ -44,7 +44,7 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Sample of the dataset is visualized in the IPython notebook. The data is clearly skewed. Some classes have way more training examples than others.
-![alt text][bins.png]
+![alt text](bins.png)
 
 ### Design and Test a Model Architecture
 
