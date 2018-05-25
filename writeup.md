@@ -1,10 +1,5 @@
 
 # **Traffic Sign Recognition** 
-
-## Writeup
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -18,19 +13,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
----
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/TrustLak/traffic-sign-classification)
-
 ### Data Set Summary & Exploration
-
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -41,20 +24,20 @@ signs data set:
 * The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
 
-#### 2. Include an exploratory visualization of the dataset.
+#### 2. Exploratory visualization of the dataset.
 
 Sample of the dataset is visualized in the IPython notebook. The data is clearly skewed. Some classes have way more training examples than others.  
 ![alt text](bins.png)
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. 
+#### 1. Preprocessing data. 
 
 As a first step, I decided to convert the images to grayscale because I believe there is little information in color. In some cases however, the red or blue color can help make better predictions. We focus however on the grayscale.
 
 As a last step, I normalized the image data because this will make the optimization process much faster. In may cases, this step is necessary for the convergence of the optimization algorithm.
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2.Model architecture.
 
 My model is a slight variation of LeNet architecture. Some of the filters have different dimensions. The details are included in the following table:
 
@@ -76,7 +59,7 @@ My model is a slight variation of LeNet architecture. Some of the filters have d
  
 The last layers is our logits, which are passed to a softmax layer. The softmax output is fed to a one-hot functions, which gives us our predictions.
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Training model.
 
 | Variable         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -88,7 +71,7 @@ The last layers is our logits, which are passed to a softmax layer. The softmax 
 | Layer initialization		|  Truncated normals with mu = 0 and sigma = 0.1  			|  
 
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Results.
 
 My final model results were:
 * validation set accuracy of 0.954 
@@ -105,7 +88,7 @@ If an iterative approach was chosen:
 
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Test on 5 random images from the web.
 
 Here are five German traffic signs that I found on the web:
 
@@ -114,7 +97,7 @@ Here are five German traffic signs that I found on the web:
 
 The first image might be difficult to classify because of the noise around the traffic sign (image not properly zoomed on the traffic sign).
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Predictions on web images.
 
 Here are the results of the prediction:
 
